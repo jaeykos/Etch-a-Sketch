@@ -4,16 +4,25 @@
   <meta charset="UTF-8">
   <title>Page Title</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
 
   <div id="palette">
     <div id="title">Etech-a-sketch</div>
-    <button id = "pixelButton"> Pixel Size: 5px</button>
-    <div id = "pixelSlider"></div>
-    <button id = "colorButton"> Color: Black</button>
-    <div id = "colorPalette"></div>
+    <button id = "pixelButton"> Pixel Size: 10px</button>
+    <div id = "pixelSlider">
+      <input type="range" min="5" max="20" value="10" class="slider" id="pixelSliderRange">
+      <div id="minMax">
+        <div class="minMaxText">5</div>
+        <div class="minMaxText">20</div>
+      </div>
+    </div>
+    
+    <button id = "colorButton"> Color</button>
+    <div id = "colorPickerDiv">
+      <input type="color" id="colorpicker" value="#0000ff" >
+    </div>
     <button id = "rgbButton"> Rainbow Mode</button>
     <button id ="eraserButton"> Eraser</button>
     <button id="clearButton">Clear</button>

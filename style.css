@@ -42,18 +42,35 @@ button{
 
 #pixelSlider{
     position: absolute;
+    display: flex;
+    flex-direction: column;
     top: 200px;
     left: 280px;
-    width: 200px;
-    height: 55px;
+    width: 150px;
+    height: auto;
     background-color: beige;
+    justify-content: center;
+    align-items: center;
 }
-#colorPalette{
+
+#minMax{
+    display: flex;
+    width:80%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.minMaxText{
+    width: fit-content;
+
+}
+
+#colorPickerDiv{
     position: absolute;
     top: 270px;
     left: 280px;
-    width: 200px;
-    height: 200px;
+    width: 10px;
+    height: 10px;
     background-color: beige;
 }
 
