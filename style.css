@@ -6,14 +6,35 @@ body {
 
     min-height:100vh;
 
+    flex-shrink: 0;
+    
+
     align-items: stretch;
-    align-content: stretch;
+    align-content:flex-start;
     
     border: 0;
     padding: 0;
-    margin: 0;
-    
+    margin: 0;   
 }
+
+#dwgBoard{
+    display: flex;
+
+    gap: 0px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+.dwgRow{
+    display: block;
+}
+.dwgBlock {
+      width: 100px;
+      height:100px;
+      background-color: #b3b3b3 ;
+      border: 0.5px solid #e6e6e6;
+      margin: 0px;
+  }
 
 #palette{
     display: flex;
@@ -21,6 +42,7 @@ body {
     width:300px;
     justify-items: center;
     align-items: center;
+    flex-shrink: 0;
 
     padding-top: 100px;
     

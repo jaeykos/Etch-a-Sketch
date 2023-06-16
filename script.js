@@ -3,14 +3,79 @@ document.addEventListener("click", buttonClicked);
 var slider = document.getElementById("pixelSliderRange");
 var outpixelButtonput = document.getElementById("rangeValueText");
 
+document.addEventListener("mousedown", MouseLeftDown);
+
+function MouseLeftDown(e){};
+
+
 slider.oninput = function() {
-    pixelButton.innerHTML = "Pixel Size: " + this.value + "px";
+    
+    dwgBlockSize = this.value;
+
+    pixelButton.innerHTML = "Pixel Size: " + dwgBlockSize+ "px";
+
+    dwgBoard.innerHTML = '';
+
+    a = window.innerWidth - 300;
+    b = window.innerHeight;
+
+    dwgBoard.style.width = a.toString();
+
+    numColumns = a / dwgBlockSize;
+    numRows = b /dwgBlockSize; 
+
+    for (let i = 0; i < (numColumns); i++){
+        const dwgRow = document.createElement("span");
+        dwgRow.id = "Row" + i;
+        dwgRow.classList.add("dwgRow");
+        document.getElementById('dwgBoard').appendChild(dwgRow);  
+        for(let j = 0; j< numRows; j++){
+            const element = document.createElement("div");
+            element.style.backgroundColor = "orange";
+            element.style.width = (dwgBlockSize +"px");
+            element.style.height = (dwgBlockSize +"px");
+            element.classList.add("dwgBlock");
+            document.getElementById(dwgRow.id).appendChild(element);
+            }  
+    }
+    
   }
+
+
 
 colorPickerDiv.style.display = "none"
 colorpicker.value = colorButton.style.backgroundColor 
 
 var isColorPickerOn = false
+
+
+
+dwgBlockSize = 50;
+a = window.innerWidth - 300;
+b = window.innerHeight;
+
+dwgBoard.style.width = a.toString();
+
+numColumns = a / dwgBlockSize;
+numRows = b /dwgBlockSize; 
+
+for (let i = 0; i < (numColumns); i++){
+    const dwgRow = document.createElement("span");
+    dwgRow.id = "Row" + i;
+    dwgRow.classList.add("dwgRow");
+    document.getElementById('dwgBoard').appendChild(dwgRow);  
+    for(let j = 0; j< numRows; j++){
+        const element = document.createElement("div");
+        element.style.backgroundColor = "orange";
+        element.style.width = (dwgBlockSize +"px");
+        element.style.height = (dwgBlockSize +"px");
+        element.classList.add("dwgBlock");
+        document.getElementById(dwgRow.id).appendChild(element);
+        }  
+}
+
+
+
 
 // Update the current slider value (each time you drag the slider handle)
 
@@ -32,8 +97,6 @@ function buttonClicked(e){
     if (e.srcElement.id == "rgbButton"){clickRgbButton(e);return;}
     if (e.srcElement.id == "eraserButton"){clickEraserButtonon(e);return;}
     if (e.srcElement.id == "clearButton"){clickClearButton(e);return;}
-
-    
     
 }
 
@@ -46,8 +109,7 @@ function clickPixelButton(e) {
     }
 }
 
-
-  colorpicker.oninput = function() {
+colorpicker.oninput = function() {
     colorButton.style.backgroundColor = this.value;
   }
 
