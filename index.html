@@ -2,11 +2,11 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Page Title</title>
+  <title>Etch-a-sketch!</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body>
+<body draggable="false">
 
   <div id="palette">
     <div id="title">Etech-a-sketch</div>
@@ -18,16 +18,24 @@
         <div class="minMaxText">100</div>
       </div>
     </div>
-    <button id = "colorButton"> Color</button>
-    <div id = "colorPickerDiv">
-      <input type="color" id="colorpicker" value="#0000ff" >
+    <button id = "backgroundColorButton"> Background Color</button>
+    <div id = "backgroundColorPickerDiv" class = 'colorPickerDiv'>
+      <input type="color" id="backgroundColorPicker" value="#0000ff" >
+    </div>
+    <button id = "borderColorButton"> Border Color</button>
+    <div id = "borderColorPickerDiv" class = 'colorPickerDiv'>
+      <input type="color" id="borderColorPicker" value="#0000ff" >
+    </div>
+    <button id = "paintColorButton"> Paint Color</button>
+    <div id = "paintColorPickerDiv" class = 'colorPickerDiv'>
+      <input type="color" id="paintColorPicker" value="#0000ff" >
     </div>
     <button id = "rgbButton"> Rainbow Mode</button>
     <button id ="eraserButton"> Eraser</button>
-    <button id="clearButton">Clear</button>
+    <button id="clearButton">Clear Paint</button>
   </div>
 
-  <div id ="dwgBoard"> 
+  <div id ="dwgBoard" draggable="false" > 
   
   </div>
   
