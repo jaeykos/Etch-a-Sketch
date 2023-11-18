@@ -208,7 +208,6 @@ function resetDwgBoardWithPixelSize() {
   pixelButton.innerHTML = "Pixel Size: " + dwgBlockSize + "px";
 
   dwgBoard.innerHTML = "";
-
   dwgBoardWidth = body.clientWidth - 300;
   dwgBoardHeight = window.innerHeight;
 
