@@ -209,10 +209,10 @@ function resetDwgBoardWithPixelSize() {
 
   dwgBoard.innerHTML = "";
 
-  dwgBoardWidth = window.innerWidth - 300;
+  dwgBoardWidth = body.clientWidth - 300;
   dwgBoardHeight = window.innerHeight;
 
-  dwgBoard.style.width = dwgBoardWidth.toString();
+  dwgBoard.style.width = dwgBoardWidth.toString() + "px";
 
   numColumns = dwgBoardWidth / dwgBlockSize;
   numRows = dwgBoardHeight / dwgBlockSize;
@@ -222,6 +222,7 @@ function resetDwgBoardWithPixelSize() {
     dwgRow.id = "Row" + i;
     dwgRow.classList.add("dwgRow");
     document.getElementById("dwgBoard").appendChild(dwgRow);
+
     for (let j = 0; j < numRows; j++) {
       const element = document.createElement("div");
       element.style.width = dwgBlockSize + "px";
