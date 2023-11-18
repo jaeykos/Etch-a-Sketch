@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Etch-a-sketch!</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
-<body draggable="false">
-
-  <div id="palette">
-    <div id="title">Etech-a-sketch</div>
-    <button id = "pixelButton"> Pixel Size: 50px</button>
-    <div id = "pixelSlider">
-      <input type="range" min="10" max="100" value="50" class="slider" id="pixelSliderRange">
-      <div id="minMax">
-        <div class="minMaxText">10</div>
-        <div class="minMaxText">100</div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Etch-a-sketch!</title>
+    <link href="/output.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
+  <body draggable="false">
+    <div id="palette" class="border-r-zinc-950 border-r-2">
+      <div
+        id="title"
+        class="flex flex-row justify-center items-center text-center text-6xl m-5"
+      >
+        Etech Sketch
       </div>
-    </div>
-    <button id = "backgroundColorButton"> Background Color</button>
-    <div id = "backgroundColorPickerDiv" class = 'colorPickerDiv'>
-      <input type="color" id="backgroundColorPicker" value="#0000ff" >
-    </div>
-    <button id = "borderColorButton"> Border Color</button>
-    <div id = "borderColorPickerDiv" class = 'colorPickerDiv'>
-      <input type="color" id="borderColorPicker" value="#0000ff" >
-    </div>
-    <button id = "paintColorButton"> Paint Color</button>
-    <div id = "paintColorPickerDiv" class = 'colorPickerDiv'>
-      <input type="color" id="paintColorPicker" value="#0000ff" >
-    </div>
-    <button id = "rgbButton"> Rainbow Mode</button>
-    <button id ="eraserButton"> Eraser</button>
-    <button id="clearButton">Clear Paint</button>
-  </div>
+      <button id="pixelButton" class="mb-0">Pixel Size: 50px</button>
+      <div id="pixelSlider">
+        <input
+          id="pixelSliderRange"
+          type="range"
+          min="10"
+          max="100"
+          value="50"
+          class="slider"
+        />
+        <div id="minMax">
+          <div class="minMaxText">10</div>
+          <div class="minMaxText">100</div>
+        </div>
+      </div>
+      <div class="mx-7 mb-3 text-xs text-center">
+        note: changing pixel size will reset all drawings and settings
+      </div>
 
-  <div id ="dwgBoard" draggable="false" > 
-  
-  </div>
-  
-</body>
+      <button id="backgroundColorButton">Background Color</button>
+      <div id="backgroundColorPickerDiv" class="colorPickerDiv">
+        <input type="color" id="backgroundColorPicker" value="#0000ff" />
+      </div>
+      <button id="borderColorButton">Border Color</button>
+      <div id="borderColorPickerDiv" class="colorPickerDiv">
+        <input type="color" id="borderColorPicker" value="#0000ff" />
+      </div>
+      <button id="paintColorButton">Paint Color</button>
+      <div id="paintColorPickerDiv" class="colorPickerDiv">
+        <input type="color" id="paintColorPicker" value="#0000ff" />
+      </div>
+      <button id="rgbButton">Rainbow Mode</button>
+      <button id="eraserButton">Eraser</button>
+      <button id="clearButton">Clear Paint</button>
+    </div>
+
+    <div id="dwgBoard" draggable="false"></div>
+  </body>
 </html>

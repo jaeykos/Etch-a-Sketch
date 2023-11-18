@@ -1,164 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
 body {
+  display: flex;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 
-    display: flex;
+  min-height: 100vh;
+  width: 100%;
+  flex-shrink: 0;
 
-    min-height:100vh;
+  align-items: stretch;
+  align-content: flex-start;
 
-    flex-shrink: 0;
-    
-
-    align-items: stretch;
-    align-content:flex-start;
-    
-    border: 0;
-    padding: 0;
-    margin: 0;   
+  border: 0;
+  padding: 0;
+  margin: 0;
 }
 
-#dwgBoard{
-    display: flex;
+#dwgBoard {
+  display: flex;
+  width: 100%;
+  gap: 0px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
 
-    gap: 0px;
-    flex-grow: 0;
-    flex-shrink: 0;
-  }
-
-.dwgRow{
-    display: block;
+.dwgRow {
+  display: block;
 }
 .dwgBlock {
-      width: 100px;
-      height:100px;
-      background-color: #b3b3b3 ;
-      border: 0.5px solid #e6e6e6;
-      margin: 0px;
-  }
-
-#palette{
-    display: flex;
-    flex-direction: column;
-    width:300px;
-    justify-content:flex-start;
-    align-items: center;
-    flex-shrink: 0;
-
-    
-    background-color: rgb(221, 221, 221);
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid black;
+  margin: 0px;
 }
 
-#title{
-    font-size: 45px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+#palette {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+
+  background-color: white;
 }
 
-button{
-    margin-block: 10px;
-    height: 50px;
-    width: 250px;
-    font-size: 20px;
-    background-Color: rgb(90, 90, 90);
-    opacity: 1;
+button {
+  margin-block: 10px;
+  height: 50px;
+  width: 250px;
+  font-size: 20px;
+  background-color: white;
+  border: 1px solid black;
+  opacity: 1;
 }
 
 button:hover {
-    opacity: 0.7 !important;
-  }
-
-#pixelSlider{
-    position: absolute;
-    display: none;
-    flex-direction: column;
-    top: 120px;
-    left: 280px;
-    width: 150px;
-    height: 50px;
-    background-color: beige;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(122, 122, 122);
-    border-style:solid ;
-    border-color: rgb(104, 96, 96) ;
-    border-radius: 6px;
+  opacity: 0.7 !important;
 }
 
+#pixelSlider {
+  display: none;
+  flex-direction: column;
 
-#minMax{
-    display: flex;
-    width:80%;
-    flex-direction: row;
-    justify-content: space-between;
+  background-color: beige;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-radius: 6px;
 }
 
-.minMaxText{
-    width: fit-content;
+#minMax {
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.colorPickerDiv{
-    
-    width: 10px;
-    height: 10px;
-    background-color: beige;
-}
-#backgroundColorPickerDiv{
-    display: none;
-    position: absolute;
-    top: 100px;
-    left: 280px;
+.minMaxText {
+  width: fit-content;
 }
 
-#borderColorPickerDiv{
-    display: none;
-    position: absolute;
-    top: 200px;
-    left: 280px;
+.colorPickerDiv {
+  width: 10px;
+  height: 10px;
+  background-color: beige;
+}
+#backgroundColorPickerDiv {
+  display: none;
+  position: absolute;
+  top: 100px;
+  left: 280px;
 }
 
-#paintColorPickerDiv{
-    display: none;
-    position: absolute;
-    top: 270px;
-    left: 280px;
+#borderColorPickerDiv {
+  display: none;
+  position: absolute;
+  top: 200px;
+  left: 280px;
 }
 
-#board{
-    display: flex;
-    flex-grow:1;
-    background-color: lightblue;
+#paintColorPickerDiv {
+  display: none;
+  position: absolute;
+  top: 270px;
+  left: 280px;
 }
 
-.main-div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-    padding-bottom: 100px;
-    width: 1200px;
+#board {
+  display: flex;
+  flex-grow: 1;
+  background-color: lightblue;
 }
 
-.header{
-    font-size: 36px;
-    font-family: Roboto-Black;
-    margin: 30px;
+.main-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+  width: 1200px;
 }
 
-.moves{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap:40px;
-    
+.header {
+  font-size: 36px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  margin: 30px;
 }
 
-
-.resultText{
-
-    font-size: 25px;
-
+.moves {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 
-#reset{
-    font-size: 30px;
-    margin-bottom: 20px;
+.resultText {
+  font-size: 25px;
+}
+
+#reset {
+  font-size: 30px;
+  margin-bottom: 20px;
 }
